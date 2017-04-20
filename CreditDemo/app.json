@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/activity/activity",
+    "pages/cardBag/cardBag",
+    "pages/discovery/discovery",
+    "pages/mine/mine"
+  ],
+  "window":{
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "CreditDemo",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "page/component/index",
+      "iconPath": "",
+      "selectedIconPath": "",
+      "text": "活动"
+    }, {
+      "pagePath": "page/API/index",
+      "iconPath": "",
+      "selectedIconPath": "",
+      "text": "卡包"
+    }, {
+      "pagePath": "page/API/index",
+      "iconPath": "",
+      "selectedIconPath": "",
+      "text": "发现"
+    }, {
+      "pagePath": "page/API/index",
+      "iconPath": "",
+      "selectedIconPath": "",
+      "text": "我的"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  }
+} 

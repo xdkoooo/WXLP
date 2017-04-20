@@ -1,0 +1,19 @@
+<view class="content">
+    <view class="screen">
+    0
+    </view>
+
+    <view class="btnGroup">
+        <view class="item orange">退格</view>
+        <view class="item orange">清屏</view>
+        <view class="item orange">+/-</view>
+        <view class="item orange">+</view>    
+    </view>
+
+    <view class="btnGroup">
+        <view class="item blue">9</view>
+        <view class="item blue">8</view>
+        <view class="item blue">7</view>
+        <view class="item blue">6</view>    
+    </view>
+</view>
