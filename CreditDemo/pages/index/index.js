@@ -8,8 +8,17 @@ Page({
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.reLaunch({
-      url: '../activity/activity'
+    wx.switchTab({
+      url: '../activity/activity',
+      success: function(res){
+        // success
+      },
+      fail: function(res) {
+        // fail
+      },
+      complete: function(res) {
+        // complete
+      }
     })
   },
   onLoad: function () {

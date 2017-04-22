@@ -14,29 +14,29 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#34A7FC",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [{
-      "pagePath": "page/component/index",
-      "iconPath": "",
-      "selectedIconPath": "",
-      "text": "活动"
+      "pagePath": "pages/activity/activity",
+      "iconPath": "image/bar_icon_huodong_normal.png",
+      "selectedIconPath": "image/bar_icon_huodong_selected.png",
+      "text": "activity"
     }, {
-      "pagePath": "page/API/index",
-      "iconPath": "",
-      "selectedIconPath": "",
-      "text": "卡包"
+      "pagePath": "pages/cardBag/cardBag",
+      "iconPath": "image/bar_icon_kabao_normal.png",
+      "selectedIconPath": "image/bar_icon_kabao_selected.png",
+      "text": "cardBag"
     }, {
-      "pagePath": "page/API/index",
-      "iconPath": "",
-      "selectedIconPath": "",
-      "text": "发现"
+      "pagePath": "pages/discovery/discovery",
+      "iconPath": "image/discovery_nor.png",
+      "selectedIconPath": "image/discovery_hgh.png",
+      "text": "discovery"
     }, {
-      "pagePath": "page/API/index",
-      "iconPath": "",
-      "selectedIconPath": "",
-      "text": "我的"
+      "pagePath": "pages/mine/mine",
+      "iconPath": "image/Me_nor.png",
+      "selectedIconPath": "image/Me_hgh.png",
+      "text": "mine"
     }]
   },
   "networkTimeout": {
