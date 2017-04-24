@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "Activity"
+    "navigationBarTitleText": "Activity",
+    "enablePullDownRefresh": "true"
 }

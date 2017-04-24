@@ -1,7 +1,7 @@
 //app.js
 App({
-  onLaunch: function () {
-    
+  onLaunch: function (options) {
+    options.scene
   },
   getUserInfo:function(cb){
     var that = this

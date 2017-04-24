@@ -1,35 +1,66 @@
 //activity.js
 //获取应用实例
-var app = getApp()
+var data = require('../../utils/data.js').songs;
 
-var order = ['red', 'yellow', 'blue', 'green', 'red']
 Page({
-  data: {
-    toView: 'red',
-    scrollTop: 100
+
+  onPullDownRefresh: function(){
+    wx.stopPullDownRefresh()
+    
   },
-  upper: function(e) {
-    console.log(e)
+
+  onReachBottom: function(){
+
   },
-  lower: function(e) {
-    console.log(e)
+
+
+	data: {
+		imgUrls: [
+			'http://p3.music.126.net/bKFfzVVNmdLTaRN5uHHPqA==/18786255672743757.jpg',
+			'http://p4.music.126.net/n15ddawhY4cyIzFu23CSJA==/1401877341861315.jpg',
+			'http://p3.music.126.net/zMwH3zh33TAacyh2_4RjXw==/1375489062675977.jpg'
+		]
+	},
+	onLoad: function() {
+		var rs = [],
+			idsMap = {},
+			keys = Object.keys(data),
+			len = keys.length;
+
+		for (var i = 0; i < len; i++) {
+			var k = keys[i];
+
+			rs.push(Object.assign({
+				id: k,
+			}, data[k]));
+
+			idsMap[k] = {
+				preid: i > 0 ? keys[i - 1] : 0,
+				nextid: i < len - 1 ? keys[i + 1] : 0
+			}
+		}
+
+		idsMap[keys[0]].preid = keys[len - 1];
+		idsMap[keys[len - 1]].nextid = keys[0];
+
+		this.setData({
+			recommends: rs
+		});
+
+		wx.setStorageSync('ids', idsMap);
+	},
+	playTap: function(e) {
+		const dataset = e.currentTarget.dataset;
+		wx.navigateTo({
+			url: `../play/index?id=${dataset.id}`
+		})
+	},
+  loadNewInfo: function(e) {
+
   },
-  scroll: function(e) {
-    console.log(e)
+  loadMoreInfo: function(e) {
+
   },
-  tap: function(e) {
-    for (var i = 0; i < order.length; ++i) {
-      if (order[i] === this.data.toView) {
-        this.setData({
-          toView: order[i + 1]
-        })
-        break
-      }
-    }
-  },
-  tapMove: function(e) {
-    this.setData({
-      scrollTop: this.data.scrollTop + 10
-    })
-  }
+
+  
 })
