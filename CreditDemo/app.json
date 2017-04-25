@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/index/index",
     "pages/activity/activity",
     "pages/cardBag/cardBag",
     "pages/discovery/discovery",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/MusicPlay/MusicPlay"
   ],
   "window":{
     "navigationBarTextStyle": "black",

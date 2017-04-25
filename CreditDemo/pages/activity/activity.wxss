@@ -2,6 +2,7 @@
 
 swiper {
 	margin-top: 1rpx;
+    height: 200px;
 }
 
 .slide-image {
@@ -15,6 +16,7 @@ swiper {
   	align-items: stretch;
   	box-sizing: border-box;
  	padding-top: 10rpx; 
+     height: 500px;
 }
 
 .block {
