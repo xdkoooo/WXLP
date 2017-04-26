@@ -31,43 +31,34 @@ Page({
 			'http://p3.music.126.net/bKFfzVVNmdLTaRN5uHHPqA==/18786255672743757.jpg',
 			'http://p4.music.126.net/n15ddawhY4cyIzFu23CSJA==/1401877341861315.jpg',
 			'http://p3.music.126.net/zMwH3zh33TAacyh2_4RjXw==/1375489062675977.jpg'
-		],
-    view: 'mina',
-    message: 'webapp',
-    
-    
-    
-    staffB: {firstName: 'Shang', lastName: 'You'},
-    staffC: {firstName: 'Gideon', lastName: 'Lin'},
-    staffA: {firstName: 'Hulk', lastName: 'Hu'},
-
-    objectArray: [
-      {id: 5, unique: 'unique_5'},
-      {id: 4, unique: 'unique_4'},
-      {id: 3, unique: 'unique_3'},
-      {id: 2, unique: 'unique_2'},
-      {id: 1, unique: 'unique_1'},
-      {id: 0, unique: 'unique_0'},
-    ],
-    numberArray: [1, 2, 3, 4]
+		]
 	},
+
 	onLoad: function() {
 		var rs = [],
 			idsMap = {},
-			keys = Object.keys(data),
-			len = keys.length;
+			keys = Object.keys(data),   // [108821,13738,14784738,46348738]
+			len = keys.length;          // 4
 
 		for (var i = 0; i < len; i++) {
-			var k = keys[i];
+			var k = keys[i];              // var k = 108821
 
-			rs.push(Object.assign({
-				id: k,
-			}, data[k]));
+			rs.push(Object.assign({id: k,}, data[k]));
+
+
+			// rs.push(Object.assign({
+			// 	id: k,
+			// }, data[k]));
 
 			idsMap[k] = {
 				preid: i > 0 ? keys[i - 1] : 0,
 				nextid: i < len - 1 ? keys[i + 1] : 0
 			}
+
+			// idsMap[108821] = {preid: 0, nextid: 13738}
+			// idsMap[13738] = {preid: 108821, nextid: 14784738}
+			// idsMap[14784738] = {preid: 13738, nextid: 46348738}
+			// idsMap[46348738] = {preid: 14784738, nextid: 0}
 		}
 
 		idsMap[keys[0]].preid = keys[len - 1];

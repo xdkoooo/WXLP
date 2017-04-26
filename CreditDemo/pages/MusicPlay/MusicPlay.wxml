@@ -1,0 +1,9 @@
+
+
+// 数据源： src action picurl 
+
+
+<audio src="{{src}}" action="{{action}}" binderror="errorEvent" bindtimeupdate="timeupdateEvent" bindeneded="endEvent"></audio>
+<image class="play-bg" mode="aspectFill" src="{{picurl}}"></image>
+
+<image src="{{picurl}}"></image>
