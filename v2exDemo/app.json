@@ -1,0 +1,28 @@
+{
+  "pages":[
+    "pages/latest/latest",
+    "pages/hotest/hotest"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#34A7FC",
+    "list": [{
+      "pagePath": "pages/latest/latest",
+      "text": "最新",
+      "iconPath": "images/latest.png",
+      "selectedIconPath": "images/latest_on.png"
+    },{
+      "pagePath": "pages/hotest/hotest",
+      "text": "最热",
+      "iconPath": "images/hotest.png",
+      "selectedIconPath": "images/hotest_on.png"
+    }]
+  }
+}
