@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/latest/latest",
-    "pages/hotest/hotest"
+    "pages/hotest/hotest",
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",

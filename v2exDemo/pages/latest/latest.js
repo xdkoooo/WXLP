@@ -14,9 +14,18 @@ Page({
     this.fetchData()
   },
 
+  // on
 
-  redictDetail(e) {
 
+  redictDetail: function(e) {
+    var id = e.currentTarget.dataset.id,
+    url = '../detail/detail?id=' + id;
+
+    console.log(url)
+
+    wx.navigateTo({
+      url: url
+    })
   },
   fetchData(){
     var that = this;
