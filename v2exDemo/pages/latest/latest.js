@@ -1,4 +1,5 @@
 var Api = require('../../utils/api.js')
+var containDataArray = [];
 
 Page({
   data:{
@@ -41,11 +42,20 @@ Page({
       // header: {}, // 设置请求的 header
       success: function(res){
         console.log(res);
-        that.setData({
-          latest: res.data
-        })
-        wx.hideNavigationBarLoading();
-        wx.stopPullDownRefresh();
+        if(containDataArray.length > 0) {
+            containDataArray.push.apply(containDataArray, res.data);          
+            that.setData({         
+              latest: containDataArray
+            })
+        }else{
+            containDataArray.push.apply(containDataArray, res.data);  
+            that.setData({          
+              latest: res.data
+          })
+        }
+        // that.setData({         
+        //   latest: res.data
+        // })
         setTimeout(function(){
           that.setData({
             hidden: true
@@ -56,8 +66,22 @@ Page({
         // fail
       },
       complete: function(res) {
-        // complete
+        wx.hideNavigationBarLoading();
+        wx.stopPullDownRefresh();
       }
     })
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: 'v2ex',
+      desc: 'xkk dev',
+      path: 'pages/latest/latest'
+    }
+  },
+
+  onReachBottom: function() {
+    wx.showNavigationBarLoading()
+    this.fetchData()
   }
 })

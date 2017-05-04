@@ -1,3 +1,5 @@
-{
-  "navigationBarTitleText": "v2ex"
-}
+{  
+    "navigationBarTitleText": "v2ex",
+    "enablePullDownRefresh": true,  
+    "backgroundTextStyle": "dark"  
+} 

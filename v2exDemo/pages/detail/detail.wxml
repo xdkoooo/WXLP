@@ -19,7 +19,7 @@
         <block wx:for="{{replies}}" wx:key="id">
             <view class="replies-item" data-id="{{item.id}}">
                 <view class="reply-owner">
-                    <image class="reply-avatar" src="{{item.member.avatar_normal}}"></image>
+                    <image class="reply-avatar" src="https:{{item.member.avatar_normal}}"></image>
                     <text class="reply-name">{{item.member.username}}</text>
                     <text class="reply-time">{{item.created}}</text>
                 </view>
